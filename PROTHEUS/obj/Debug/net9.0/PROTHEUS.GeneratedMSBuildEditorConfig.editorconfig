@@ -24,6 +24,9 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/Miguel/Desktop/Novapasta/PROTHEUS/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Miguel/Desktop/Novapasta/PROTHEUS/Views/CameraWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Miguel/Desktop/Novapasta/PROTHEUS/Views/ConfigWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

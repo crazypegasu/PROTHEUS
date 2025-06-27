@@ -146,3 +146,6 @@ C:\Users\Miguel\Desktop\Novapasta\PROTHEUS\obj\Debug\net9.0\refint\PROTHEUS.dll
 C:\Users\Miguel\Desktop\Novapasta\PROTHEUS\obj\Debug\net9.0\PROTHEUS.pdb
 C:\Users\Miguel\Desktop\Novapasta\PROTHEUS\obj\Debug\net9.0\PROTHEUS.genruntimeconfig.cache
 C:\Users\Miguel\Desktop\Novapasta\PROTHEUS\obj\Debug\net9.0\ref\PROTHEUS.dll
+C:\Users\Miguel\Desktop\Novapasta\PROTHEUS\obj\Debug\net9.0\PROTHEUS.sourcelink.json
+C:\Users\Miguel\Desktop\Novapasta\PROTHEUS\bin\Debug\net9.0\LibVLCSharp.dll
+C:\Users\Miguel\Desktop\Novapasta\PROTHEUS\bin\Debug\net9.0\LibVLCSharp.Avalonia.dll

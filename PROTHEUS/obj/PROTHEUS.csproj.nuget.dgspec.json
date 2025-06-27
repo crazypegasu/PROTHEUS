@@ -74,6 +74,14 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "LibVLCSharp": {
+              "target": "Package",
+              "version": "[3.9.3, )"
+            },
+            "LibVLCSharp.Avalonia": {
+              "target": "Package",
+              "version": "[3.9.3, )"
             }
           },
           "imports": [
