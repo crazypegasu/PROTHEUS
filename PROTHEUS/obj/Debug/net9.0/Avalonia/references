@@ -23,6 +23,8 @@ C:\Users\Miguel\.nuget\packages\avalonia.win32\11.3.2\lib\net8.0\Avalonia.Win32.
 C:\Users\Miguel\.nuget\packages\avalonia.win32\11.3.2\lib\net8.0\Avalonia.Win32.dll
 C:\Users\Miguel\.nuget\packages\avalonia.x11\11.3.2\lib\net8.0\Avalonia.X11.dll
 C:\Users\Miguel\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityToolkit.Mvvm.dll
+C:\Users\Miguel\.nuget\packages\emgu.cv.bitmap\4.10.0.5680\lib\netstandard2.0\Emgu.CV.Bitmap.dll
+C:\Users\Miguel\.nuget\packages\emgu.cv\4.10.0.5680\lib\netstandard2.0\Emgu.CV.dll
 C:\Users\Miguel\.nuget\packages\harfbuzzsharp\8.3.1.1\lib\net8.0\HarfBuzzSharp.dll
 C:\Users\Miguel\.nuget\packages\libvlcsharp.avalonia\3.9.3\lib\netstandard2.0\LibVLCSharp.Avalonia.dll
 C:\Users\Miguel\.nuget\packages\libvlcsharp\3.9.3\lib\net8.0\LibVLCSharp.dll
@@ -32,6 +34,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\Microso
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\Microsoft.VisualBasic.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\Microsoft.Win32.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\Microsoft.Win32.Registry.dll
+C:\Users\Miguel\.nuget\packages\microsoft.win32.systemevents\9.0.6\lib\net9.0\Microsoft.Win32.SystemEvents.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\mscorlib.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\netstandard.dll
 C:\Users\Miguel\.nuget\packages\skiasharp\2.88.9\lib\net6.0\SkiaSharp.dll
@@ -65,6 +68,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.Diagnostics.TraceSource.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.Diagnostics.Tracing.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.dll
+C:\Users\Miguel\.nuget\packages\system.drawing.common\9.0.6\lib\net9.0\System.Drawing.Common.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.Drawing.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.Drawing.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.Dynamic.Runtime.dll
@@ -116,6 +120,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.Numerics.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.Numerics.Vectors.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.ObjectModel.dll
+C:\Users\Miguel\.nuget\packages\system.drawing.common\9.0.6\lib\net9.0\System.Private.Windows.Core.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.Reflection.DispatchProxy.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.Reflection.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\9.0.6\ref\net9.0\System.Reflection.Emit.dll

@@ -1,5 +1,6 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vlc="clr-namespace:LibVLCSharp.Avalonia;assembly=LibVLCSharp.Avalonia"
         x:Class="PROTHEUS.Views.MainWindow"
         Title="PROTHEUS - Visualizador de Câmeras"
         Width="1200" Height="800"
@@ -16,15 +17,31 @@
         </StackPanel>
 
         <!-- Grade das Câmeras -->
-       <UniformGrid Columns="4" Rows="2" Margin="10">
-            <Border x:Name="BorderCam1" Background="Black" Margin="5" CornerRadius="5"/>
-            <Border x:Name="BorderCam2" Background="Black" Margin="5" CornerRadius="5"/>
-            <Border x:Name="BorderCam3" Background="Black" Margin="5" CornerRadius="5"/>
-            <Border x:Name="BorderCam4" Background="Black" Margin="5" CornerRadius="5"/>
-            <Border x:Name="BorderCam5" Background="Black" Margin="5" CornerRadius="5"/>
-            <Border x:Name="BorderCam6" Background="Black" Margin="5" CornerRadius="5"/>
-            <Border x:Name="BorderCam7" Background="Black" Margin="5" CornerRadius="5"/>
-            <Border x:Name="BorderCam8" Background="Black" Margin="5" CornerRadius="5"/>
+        <UniformGrid Columns="4" Rows="2" Margin="10">
+            <Border x:Name="BorderCam1" Background="Black" Margin="5" CornerRadius="5" MinHeight="150" MinWidth="200">
+                <vlc:VideoView x:Name="VideoView1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+            </Border>
+            <Border x:Name="BorderCam2" Background="Black" Margin="5" CornerRadius="5" MinHeight="150" MinWidth="200">
+                <vlc:VideoView x:Name="VideoView2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+            </Border>
+            <Border x:Name="BorderCam3" Background="Black" Margin="5" CornerRadius="5" MinHeight="150" MinWidth="200">
+                <vlc:VideoView x:Name="VideoView3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+            </Border>
+            <Border x:Name="BorderCam4" Background="Black" Margin="5" CornerRadius="5" MinHeight="150" MinWidth="200">
+                <vlc:VideoView x:Name="VideoView4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+            </Border>
+            <Border x:Name="BorderCam5" Background="Black" Margin="5" CornerRadius="5" MinHeight="150" MinWidth="200">
+                <vlc:VideoView x:Name="VideoView5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+            </Border>
+            <Border x:Name="BorderCam6" Background="Black" Margin="5" CornerRadius="5" MinHeight="150" MinWidth="200">
+                <vlc:VideoView x:Name="VideoView6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+            </Border>
+            <Border x:Name="BorderCam7" Background="Black" Margin="5" CornerRadius="5" MinHeight="150" MinWidth="200">
+                <vlc:VideoView x:Name="VideoView7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+            </Border>
+            <Border x:Name="BorderCam8" Background="Black" Margin="5" CornerRadius="5" MinHeight="150" MinWidth="200">
+                <vlc:VideoView x:Name="VideoView8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+            </Border>
         </UniformGrid>
     </DockPanel>
 </Window>

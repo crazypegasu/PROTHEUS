@@ -14,8 +14,12 @@
           "Avalonia.Fonts.Inter": "11.3.2",
           "Avalonia.Themes.Fluent": "11.3.2",
           "CommunityToolkit.Mvvm": "8.2.1",
+          "Emgu.CV": "4.10.0.5680",
+          "Emgu.CV.Bitmap": "4.10.0.5680",
+          "Emgu.CV.runtime.windows": "4.10.0.5680",
           "LibVLCSharp": "3.9.3",
-          "LibVLCSharp.Avalonia": "3.9.3"
+          "LibVLCSharp.Avalonia": "3.9.3",
+          "System.Drawing.Common": "9.0.6"
         },
         "runtime": {
           "PROTHEUS.dll": {}
@@ -259,6 +263,204 @@
           }
         }
       },
+      "Emgu.CV/4.10.0.5680": {
+        "dependencies": {
+          "System.Drawing.Primitives": "4.3.0",
+          "System.Runtime": "4.3.1",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
+          "System.Text.Json": "9.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Emgu.CV.dll": {
+            "assemblyVersion": "4.10.0.5680",
+            "fileVersion": "4.10.0.5680"
+          }
+        }
+      },
+      "Emgu.CV.Bitmap/4.10.0.5680": {
+        "dependencies": {
+          "Emgu.CV": "4.10.0.5680",
+          "System.Drawing.Common": "9.0.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Emgu.CV.Bitmap.dll": {
+            "assemblyVersion": "4.10.0.5680",
+            "fileVersion": "4.10.0.5680"
+          }
+        }
+      },
+      "Emgu.CV.runtime.windows/4.10.0.5680": {
+        "dependencies": {
+          "Emgu.CV": "4.10.0.5680",
+          "Emgu.runtime.windows.msvc.rt.arm64": "19.42.34435",
+          "Emgu.runtime.windows.msvc.rt.x64": "19.42.34435",
+          "Emgu.runtime.windows.msvc.rt.x86": "19.42.34435"
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/cvextern.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "4.10.0.5680"
+          },
+          "runtimes/win-x64/native/cvextern.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "4.10.0.5680"
+          },
+          "runtimes/win-x64/native/libusb-1.0.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/opencv_videoio_ffmpeg4100_64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2024.5.0.0"
+          },
+          "runtimes/win-x86/native/cvextern.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "4.10.0.5680"
+          },
+          "runtimes/win-x86/native/libusb-1.0.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/opencv_videoio_ffmpeg4100.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "2024.5.0.0"
+          }
+        }
+      },
+      "Emgu.runtime.windows.msvc.rt.arm64/19.42.34435": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/concrt140.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-arm64/native/msvcp140.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-arm64/native/msvcp140_1.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-arm64/native/msvcp140_2.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-arm64/native/msvcp140_atomic_wait.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-arm64/native/msvcp140_codecvt_ids.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-arm64/native/vcruntime140.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-arm64/native/vcruntime140_1.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          }
+        }
+      },
+      "Emgu.runtime.windows.msvc.rt.x64/19.42.34435": {
+        "runtimeTargets": {
+          "runtimes/win-x64/native/concrt140.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x64/native/msvcp140.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x64/native/msvcp140_1.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x64/native/msvcp140_2.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x64/native/msvcp140_atomic_wait.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x64/native/msvcp140_codecvt_ids.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x64/native/vcruntime140.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x64/native/vcruntime140_1.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          }
+        }
+      },
+      "Emgu.runtime.windows.msvc.rt.x86/19.42.34435": {
+        "runtimeTargets": {
+          "runtimes/win-x86/native/concrt140.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x86/native/msvcp140.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x86/native/msvcp140_1.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x86/native/msvcp140_2.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x86/native/msvcp140_atomic_wait.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x86/native/msvcp140_codecvt_ids.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          },
+          "runtimes/win-x86/native/vcruntime140.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "14.42.34433.0"
+          }
+        }
+      },
       "HarfBuzzSharp/8.3.1.1": {
         "dependencies": {
           "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1",
@@ -395,6 +597,22 @@
       },
       "Microsoft.NETCore.Platforms/1.1.1": {},
       "Microsoft.NETCore.Targets/1.1.3": {},
+      "Microsoft.Win32.SystemEvents/9.0.6": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.625.26613"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.625.26613"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
@@ -547,6 +765,27 @@
           "Microsoft.NETCore.Platforms": "1.1.1",
           "Microsoft.NETCore.Targets": "1.1.3",
           "System.Runtime": "4.3.1"
+        }
+      },
+      "System.Drawing.Common/9.0.6": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.6"
+        },
+        "runtime": {
+          "lib/net9.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.625.26605"
+          },
+          "lib/net9.0/System.Private.Windows.Core.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.625.26605"
+          }
+        }
+      },
+      "System.Drawing.Primitives/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.1",
+          "System.Runtime.Extensions": "4.3.0"
         }
       },
       "System.Globalization/4.3.0": {
@@ -866,6 +1105,7 @@
           "System.Runtime": "4.3.1"
         }
       },
+      "System.Text.Json/9.0.0": {},
       "System.Text.RegularExpressions/4.3.1": {
         "dependencies": {
           "System.Runtime": "4.3.1"
@@ -1015,6 +1255,48 @@
       "path": "communitytoolkit.mvvm/8.2.1",
       "hashPath": "communitytoolkit.mvvm.8.2.1.nupkg.sha512"
     },
+    "Emgu.CV/4.10.0.5680": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nMCgw4gwhH1Kj+MvzL4cb+Sfa8+HoYGIkjj/BHR0KRnGi4rDF63Me3JbqqbzZlca+1zZlC2taT4udlQ3YQgjsQ==",
+      "path": "emgu.cv/4.10.0.5680",
+      "hashPath": "emgu.cv.4.10.0.5680.nupkg.sha512"
+    },
+    "Emgu.CV.Bitmap/4.10.0.5680": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eiKzSXlMlv9qycceNiWyZow7CeiajREmfL/bt8MajNazgt+8Ky+BEpp77DJADIJemeCqpPiICISeQg/21jNRhw==",
+      "path": "emgu.cv.bitmap/4.10.0.5680",
+      "hashPath": "emgu.cv.bitmap.4.10.0.5680.nupkg.sha512"
+    },
+    "Emgu.CV.runtime.windows/4.10.0.5680": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WzBJWWENbF1oQKBo92ODtt9V/Eh4MFo8Y3MxxpWdoKJnZAjStxlE5epy3rB7442ZPAIRAiAaqPPZfrdml5Q9vQ==",
+      "path": "emgu.cv.runtime.windows/4.10.0.5680",
+      "hashPath": "emgu.cv.runtime.windows.4.10.0.5680.nupkg.sha512"
+    },
+    "Emgu.runtime.windows.msvc.rt.arm64/19.42.34435": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tb+JdhPLkX0MsMweKhL8zY/XUm+opxl6FLP7fyMf93EqUrUmR3YAyxmzcTyDyndh4XQ4bl+Eain9ugm7y/e26g==",
+      "path": "emgu.runtime.windows.msvc.rt.arm64/19.42.34435",
+      "hashPath": "emgu.runtime.windows.msvc.rt.arm64.19.42.34435.nupkg.sha512"
+    },
+    "Emgu.runtime.windows.msvc.rt.x64/19.42.34435": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3aIW16hRIV05a9oRW899LjPhdea/FJamPwZulwNB2P9YItwq+6XMqMeV3lg80giIQalAHQlVRVbwC54N6q3NMw==",
+      "path": "emgu.runtime.windows.msvc.rt.x64/19.42.34435",
+      "hashPath": "emgu.runtime.windows.msvc.rt.x64.19.42.34435.nupkg.sha512"
+    },
+    "Emgu.runtime.windows.msvc.rt.x86/19.42.34435": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NrCzZrq+S9jJOLWgh0ybVeHEQgillrASOFhlvV7FRrW1ufxCI3uZgySIpsGYSWQaJYpi5A4jfTP6Ekcjl3shDw==",
+      "path": "emgu.runtime.windows.msvc.rt.x86/19.42.34435",
+      "hashPath": "emgu.runtime.windows.msvc.rt.x86.19.42.34435.nupkg.sha512"
+    },
     "HarfBuzzSharp/8.3.1.1": {
       "type": "package",
       "serviceable": true,
@@ -1084,6 +1366,13 @@
       "sha512": "sha512-3Wrmi0kJDzClwAC+iBdUBpEKmEle8FQNsCs77fkiOIw/9oYA07bL1EZNX0kQ2OMN3xpwvl0vAtOCYY3ndDNlhQ==",
       "path": "microsoft.netcore.targets/1.1.3",
       "hashPath": "microsoft.netcore.targets.1.1.3.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/9.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mUa3Chovao0xQ74j2hUN5kDTn3luY/1e9usJYT0r51cgqfQsgQu5C8Cis9h65SNRbkbBwErfXKlBtHCkMiYa/g==",
+      "path": "microsoft.win32.systemevents/9.0.6",
+      "hashPath": "microsoft.win32.systemevents.9.0.6.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
@@ -1259,6 +1548,20 @@
       "sha512": "sha512-rswfv0f/Cqkh78rA5S8eN8Neocz234+emGCtTF3lxPY96F+mmmUen6tbn0glN6PMvlKQb9bPAY5e9u7fgPTkKw==",
       "path": "system.diagnostics.tracing/4.3.0",
       "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/9.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KpPB6e7PYCalslhmq/dVa2tJgCcfUDhEK83j1Eix+BmEcNPP00JJBvFrBT7jGcHLmQzsIA4AthwNFkk+cD3RKA==",
+      "path": "system.drawing.common/9.0.6",
+      "hashPath": "system.drawing.common.9.0.6.nupkg.sha512"
+    },
+    "System.Drawing.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1QU/c35gwdhvj77fkScXQQbjiVAqIL3fEYn/19NE0CV/ic5TN5PyWAft8HsrbRd4SBLEoErNCkWSzMDc0MmbRw==",
+      "path": "system.drawing.primitives/4.3.0",
+      "hashPath": "system.drawing.primitives.4.3.0.nupkg.sha512"
     },
     "System.Globalization/4.3.0": {
       "type": "package",
@@ -1462,6 +1765,13 @@
       "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Json/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-js7+qAu/9mQvnhA4EfGMZNEzXtJCDxgkgj8ohuxq/Qxv+R56G+ljefhiJHOxTNiw54q8vmABCWUwkMulNdlZ4A==",
+      "path": "system.text.json/9.0.0",
+      "hashPath": "system.text.json.9.0.0.nupkg.sha512"
     },
     "System.Text.RegularExpressions/4.3.1": {
       "type": "package",

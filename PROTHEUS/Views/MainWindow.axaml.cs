@@ -1,25 +1,32 @@
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media;
+using Avalonia.Controls.Primitives; // Para ToolTip
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using System.Threading.Tasks;
 using PROTHEUS.Models;
-using PROTHEUS.Views; // já está, pode manter
-
+using LibVLCSharp.Shared;
+using LibVLCSharp.Avalonia;
+using System;
 
 namespace PROTHEUS.Views
 {
     public partial class MainWindow : Window
     {
+        private LibVLC _libVLC;
+        private Dictionary<int, MediaPlayer> _mediaPlayers = new();
+
         public MainWindow()
         {
             InitializeComponent();
 
-            BtnSair.Click += (_, _) => Close(); // Sair
+            // NÃO chame Core.Initialize() aqui — faça isso no Program.cs antes de BuildAvaloniaApp()
+            _libVLC = new LibVLC();
 
-            BtnAtualizar.Click += (_, _) => CarregarStatusDasCameras();
+            BtnSair.Click += (_, _) => Close();
 
+            BtnAtualizar.Click += async (_, _) => await CarregarStatusDasCamerasAsync();
 
             BtnConfiguracoes.Click += (_, _) =>
             {
@@ -27,21 +34,28 @@ namespace PROTHEUS.Views
                 config.ShowDialog(this);
             };
 
-            // Carregar status das câmeras
-            CarregarStatusDasCameras();
+            // Carregamento inicial das câmeras, sem await para não travar a UI
+            _ = CarregarStatusDasCamerasAsync();
         }
 
-        private async void CarregarStatusDasCameras()
+        private async Task CarregarStatusDasCamerasAsync()
         {
             var config = ConfigManager.Carregar();
 
             for (int i = 0; i < 8; i++)
             {
                 var border = this.FindControl<Border>($"BorderCam{i + 1}");
+                var videoView = this.FindControl<VideoView>($"VideoView{i + 1}");
+
+                if (border == null || videoView == null)
+                {
+                    Console.WriteLine($"[WARN] Border ou VideoView não encontrado para índice {i + 1}");
+                    continue;
+                }
 
                 if (i < config.Count)
                 {
-                    var camera = config[i];
+                    CameraConfig camera = config[i];
                     string status;
 
                     try
@@ -55,35 +69,27 @@ namespace PROTHEUS.Views
                         status = "🔴 Offline";
                     }
 
-                    border.Child = new StackPanel
-                    {
-                        Children =
-                        {
-                            new TextBlock
-                            {
-                                Text = $"Câmera {i + 1}",
-                                FontWeight = FontWeight.Bold,
-                                Foreground = Brushes.White,
-                                HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center
-                            },
-                            new TextBlock
-                            {
-                                Text = $"{camera.Ip} - {status}",
-                                Foreground = Brushes.Gray,
-                                HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center
-                            }
-                        }
-                    };
+                    // Define tooltip corretamente (attached property)
+                    ToolTip.SetTip(border, $"Câmera {i + 1} - {camera.Ip} - {status}");
 
-                    // Adiciona evento de duplo clique para abrir visualização
-                    border.PointerPressed += (s, e) =>
-                    {
-                        if (e.ClickCount == 2)
-                            AbrirCameraEmTelaCheia(i);
-                    };
+                    // Limpa conteúdo anterior e insere só o VideoView para garantir que vídeo apareça
+                    border.Child = videoView;
+
+                    IniciarPreviewCamera(i, camera, videoView);
                 }
                 else
                 {
+                    ToolTip.SetTip(border, "Não configurada");
+
+                    if (_mediaPlayers.ContainsKey(i))
+                    {
+                        _mediaPlayers[i].Stop();
+                        _mediaPlayers[i].Dispose();
+                        _mediaPlayers.Remove(i);
+                    }
+
+                    videoView.MediaPlayer = null;
+
                     border.Child = new TextBlock
                     {
                         Text = "Não configurada",
@@ -95,10 +101,33 @@ namespace PROTHEUS.Views
             }
         }
 
-        private void AbrirCameraEmTelaCheia(int index)
+        private void IniciarPreviewCamera(int index, CameraConfig camera, VideoView videoView)
         {
-            var janela = new CameraWindow(index);
-            janela.ShowDialog(this);
+            if (_mediaPlayers.ContainsKey(index))
+            {
+                _mediaPlayers[index].Stop();
+                _mediaPlayers[index].Dispose();
+                _mediaPlayers.Remove(index);
+            }
+
+            try
+            {
+                var mediaPlayer = new MediaPlayer(_libVLC);
+                videoView.MediaPlayer = mediaPlayer;
+
+                string rtspUrl = $"rtsp://{camera.Usuario}:{camera.Senha}@{camera.Ip}:554/cam/realmonitor?channel=1&subtype=0";
+
+                Console.WriteLine($"[INFO] Tentando iniciar stream câmera {index + 1}: {rtspUrl}");
+
+                var media = new Media(_libVLC, rtspUrl, FromType.FromLocation);
+                mediaPlayer.Play(media);
+
+                _mediaPlayers[index] = mediaPlayer;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Erro ao iniciar preview da câmera {index + 1}: {ex.Message}");
+            }
         }
     }
 }
